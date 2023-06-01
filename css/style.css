@@ -193,6 +193,8 @@ p {
     /* Transition to full opacity when the "loaded" class is added */
 }
 
+/* Product Start */
+
 .product-section {
     height: 80rem;
     display: flex;
@@ -235,7 +237,7 @@ p {
 .button-showcase {
     display: inline-block;
     padding: 1rem 2rem;
-    border-radius: 3rem;
+    border-radius: 4rem;
     /* Adjust the value to control the roundness of the buttons */
     background-color: #ffffff;
     /* Set the background color */
@@ -266,13 +268,14 @@ p {
     border-radius: 3rem;
     border: 2px solid transparent;
     z-index: -1;
-    animation: borderExtraAnimation 2s linear infinite;
+    animation: borderAnimation 2s linear infinite;
 }
 
 .button-showcase:hover {
     cursor: pointer;
     background-color: #223e4b;
     color: white;
+    transform: scale(1.1);
 }
 
 .button-showcase:hover::before {
@@ -283,6 +286,35 @@ p {
 .delen {
     font-size: 1.5rem;
 }
+
+/* Product End */
+
+.carousel {
+    width: 100%;
+    /* Adjust the height as needed */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel-card {
+    display: inline-block;
+    width: 25%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-card figcaption {
+    margin-top: 0.5rem;
+}
+
+
+
+
 
 
 .section--review {
