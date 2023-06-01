@@ -14,9 +14,13 @@ body {
     font-family: "Montserrat", sans-serif
 }
 
-h1 {
-    font-family: "Bebas Nue", sans-serif;
-    font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bebas Neue", sans-serif;
 }
 
 p {
@@ -189,6 +193,97 @@ p {
     /* Transition to full opacity when the "loaded" class is added */
 }
 
+.product-section {
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+}
+
+.product-image {
+    max-width: 50%;
+
+}
+
+
+
+.product-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-section h3 {
+    position: absolute;
+    top: 0;
+    text-align: end;
+    font-size: 9rem;
+    font-weight: normal;
+}
+
+.product-description {
+    font-size: 3rem;
+    line-height: 1.5;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.button-showcase {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    /* Adjust the value to control the roundness of the buttons */
+    background-color: #ffffff;
+    /* Set the background color */
+    color: black;
+    /* Set the text color */
+    font-size: 4rem;
+    transition: background-color 0.5s;
+    position: relative;
+    overflow: hidden;
+    margin-top: 7rem;
+}
+
+.favicon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-family: "Font Awesome 5 Free";
+    padding: 1rem;
+}
+
+.button-showcase::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    border: 2px solid transparent;
+    z-index: -1;
+    animation: borderExtraAnimation 2s linear infinite;
+}
+
+.button-showcase:hover {
+    cursor: pointer;
+    background-color: #223e4b;
+    color: white;
+}
+
+.button-showcase:hover::before {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.delen {
+    font-size: 1.5rem;
+}
+
 
 .section--review {
     background: white;
@@ -355,5 +450,32 @@ p {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes borderExtraAnimation {
+    0% {
+        transform: rotate(0);
+        border-image: linear-gradient(to right, #36b5d6, #1a4c64) 1;
+    }
+
+    25% {
+        transform: rotate(90deg);
+        border-image: linear-gradient(to right, #1a4c64, #36d668) 1;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-image: linear-gradient(to right, #36d668, #d63636) 1;
+    }
+
+    75% {
+        transform: rotate(270deg);
+        border-image: linear-gradient(to right, #d63636, #36b5d6) 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-image: linear-gradient(to right, #36b5d6, #1a4c64) 1;
     }
 }
