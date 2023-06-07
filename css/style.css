@@ -75,6 +75,7 @@ p {
     font-size: 16px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    border: 1px solid black;
 
 }
 
@@ -100,7 +101,7 @@ p {
 
 .products {
     float: right;
-    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .products a {
@@ -407,6 +408,58 @@ p {
 /* Your existing CSS styles for header, products, and showroom-button */
 
 /* END SHOWROOM BLITZ */
+
+.steps-section {
+    display: grid;
+    grid-template-areas:
+        "step1 step2"
+        "step3 step4";
+    gap: 2rem;
+}
+
+.step {
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 80%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.step1 {
+    grid-area: step1;
+}
+
+.step2 {
+    grid-area: step2;
+}
+
+.step3 {
+    grid-area: step3;
+}
+
+.step4 {
+    grid-area: step4;
+}
+
+.steps-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.steps-section p {}
+
+.stepsimage {
+    width: 10rem;
+    height: 10rem;
+
+}
 
 /* Begin Footer */
 .footer {
