@@ -55,7 +55,7 @@ function startCarousel() {
 }
 
 function nextSlide() {
-  const carouselImages = document.querySelector(".carousel-images");
+  const carouselImages = document.querySelector(".carousel");
   const imageWidth = carouselImages.firstElementChild.clientWidth;
 
   carouselImages.style.transition = "transform 1s ease-in-out";
