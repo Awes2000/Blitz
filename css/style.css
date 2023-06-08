@@ -7,6 +7,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 body {
@@ -30,28 +31,22 @@ p {
 
 .header {
     background-color: #eee;
-    padding: 3rem;
-    height: 15vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 10rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
 }
 
 .logo {
     width: 10rem;
+}
 
+.logo img {
+    justify-content: flex-start;
 }
 
 
 .products {
     display: flex;
     align-items: center;
-    margin-left: auto;
-}
-
-.products:nth-of-type(1) {
-    margin-left: auto;
 }
 
 .products a {
@@ -77,6 +72,10 @@ p {
     transition: background-color 0.3s ease;
     border: 0.1rem solid black;
 
+}
+
+.button:nth-of-type(1) {
+    margin-left: auto;
 }
 
 /* Style the hover effect */
@@ -174,23 +173,29 @@ p {
 /* Product Start */
 
 .product-section {
-    height: 80rem;
+    height: auto;
     display: flex;
     align-items: center;
     padding: 4rem;
+    gap: 5rem;
+
+}
+
+.product-name {
+    padding: 2rem;
+    font-size: 3.5rem;
 }
 
 .product-image {
     max-width: 50%;
-    height: 80vh;
+    height: auto;
+    box-shadow: 0.4375rem 0.4375rem 1rem #c4c3c3, -0.4375rem -0.4375rem 1rem #ffffff;
 
 }
 
 
-
 .product-content {
     position: relative;
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,20 +203,10 @@ p {
 
 }
 
+
 .product-section h3 {
+    font-size: 4rem;
 
-    top: 0;
-    text-align: end;
-    font-size: 9rem;
-    font-weight: normal;
-}
-
-.product-description {
-    font-size: 3rem;
-    line-height: 1.5;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
 }
 
 .button-showcase {
@@ -226,8 +221,7 @@ p {
     font-size: 4rem;
     transition: background-color 0.5s;
     position: relative;
-    overflow: hidden;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 
 .favicon {
@@ -269,70 +263,92 @@ p {
 
 /* Product End */
 
+.favicon {
+    color: #999;
+    font-size: 1.5rem;
+}
+
+.delen {
+    font-size: 1.5rem;
+    color: #999;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .carousel {
-    width: 100%;
     /* Adjust the height as needed */
-    overflow: hidden;
-    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+
+}
+
+.carousel-images {
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .carousel-card {
-    display: inline-block;
-    width: 25%;
-    padding: 0.5rem;
-    text-align: center;
+    padding: 3rem;
+    margin-bottom: 4rem;
+
 }
 
 .carousel-card img {
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0.4375rem 0.4375rem 1rem #c4c3c3, -0.4375rem -0.4375rem 1rem #ffffff;
+}
+
+.carousel-card img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    /* Increase the image size by 10% */
 }
 
 .carousel-card figcaption {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+
 }
 
+.carousel-card:hover figcaption {
+    transform: scale(1.1);
+    font-weight: bold;
+    /* Increase the size of the figcaption */
+}
 
 .product-section-bottom {
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 4rem;
+    gap: 3rem;
 }
 
 .product-image-bottom {
     max-width: 50%;
-    order: 1;
-    height: 70vh;
-    padding: 3rem;
-    margin-left: 5rem;
-    /* Verander de volgorde van de afbeelding naar 1 */
+    height: auto;
+    order: 2
 }
 
 .product-content-bottom {
-    flex: 1;
-    order: 2;
-    /* Verander de volgorde van de inhoud naar 2 */
-    text-align: right;
-    /* Plaats de tekst aan de rechterkant */
+    position: relative;
     display: flex;
-    justify-content: end;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3;
 }
 
 .product-name-bottom {
-    font-size: 3rem;
-    font-weight: normal;
-
-}
-
-.product-description-bottom {
-    font-size: 3rem;
-    line-height: 1.5;
-    flex-direction: column;
-    margin-right: 2rem;
-
-    /* Plaats de tekst aan de rechterkant */
+    font-size: 3.5rem;
+    padding: 4rem;
 }
 
 .button-showcase-bottom {
@@ -346,22 +362,9 @@ p {
     cursor: pointer;
 }
 
-.favicon {
-    color: #999;
-    font-size: 1.5rem;
-}
-
-.delen {
-    font-size: 1.5rem;
-    color: #999;
-}
-
-
-
-
 
 .section--review {
-    background: white;
+    background-color: white;
     display: flex;
     padding: 4rem;
     align-items: center;
@@ -422,34 +425,6 @@ p {
     padding-bottom: 2rem;
 }
 
-/* Showroom Blitz Exhaust Pipe Begin */
-.carousel {
-    width: 100%;
-    /* Adjust the height as needed */
-    overflow: hidden;
-}
-
-.carousel-images {
-    display: flex;
-    width: 300%;
-    /* Each image takes 33.33% of the carousel width */
-    animation: transform 1s ease-in-out
-}
-
-.carousel-card {
-    flex: 0 0 12%;
-    padding: 0.5rem;
-}
-
-.carousel-card img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-/* Your existing CSS styles for header, products, and showroom-button */
-
-/* END SHOWROOM BLITZ */
 
 .steps-section {
     display: grid;
@@ -461,17 +436,19 @@ p {
 
 .step {
     margin: 0 auto;
-    padding: 3rem;
+    padding: 4rem;
     border: 0.1rem solid #ccc;
     background-color: #f9f9f9;
     text-align: center;
-    width: 80%;
+    width: auto;
     height: 40rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+    margin: 2rem;
+    box-shadow: 0.4375rem 0.4375rem 1rem #c4c3c3, -0.4375rem -0.4375rem 1rem #ffffff;
 }
 
 .step1 {
@@ -498,8 +475,7 @@ p {
 .steps-section p {}
 
 .stepsimage {
-    width: 10rem;
-    height: 10rem;
+    overflow: hidden;
 
 }
 
@@ -613,11 +589,11 @@ p {
 
 /* Media queries for responsive design */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 37.5rem) {
     .header {
         flex-direction: column;
-        padding: 1 rem;
-        height: 50vh;
+        padding: 1.5rem;
+        height: 15rem;
         width: 100%;
     }
 
@@ -639,4 +615,17 @@ p {
         margin-left: 0;
         margin-right: 1rem;
     }
+
+    .product-section {
+        flex-direction: column;
+    }
+
+    .carousel {
+        flex-wrap: wrap;
+    }
+
+    .step {
+        flex-direction: column;
+    }
+
 }
