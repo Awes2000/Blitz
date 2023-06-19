@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+p {
+    font-family: "Gotham", sans-serif;
+}
+
+
+.header {
+    background-color: #eee;
+    height: 10rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    width: 10rem;
+}
+
+.logo img {
+    justify-content: flex-start;
+}
+
+
+.products {
+    display: flex;
+    align-items: center;
+}
+
+.products a {
+    color: #333;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 1rem;
+    /* Adjust the margin value as needed */
+}
+
+
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    /* Adjust the value to control the roundness of the buttons */
+    background-color: #ffffff;
+    /* Set the background color */
+    color: #fffbfb;
+    /* Set the text color */
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 0.1rem solid black;
+
+
+}
+
+.button:nth-of-type(1) {
+    margin-left: auto;
+}
+
+/* Style the hover effect */
+.button:hover {
+    background-color: #000000;
+    color: #fff;
+    background-position: -100% 0;
+    /* Set a different background color on hover */
+}
+
+
+
+
+/* Product Start */
+
+.product-section {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+    gap: 5rem;
+
+}
+
+/* Existing styles */
+
+/* Add styles for tuning circles */
+.tuning-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    /* Add this line */
+}
+
+.tuning-circle {
+    display: flex;
+    /* Change from inline-block to flex */
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: 0.1rem solid black;
+    font-weight: bold;
+
+}
+
+.tuning-circle:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+.tuning-selection {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+    /* Add this line */
+}
+
+#tuning-selection-text {
+
+    margin-left: 0.5rem;
+    /* Add this line for spacing */
+}
+
+/* Additional styles for the "No tuning selected" box */
+#tuning-selection-text.empty {
+    color: red;
+}
+
+.selected {
+    /* Add your desired styling for the selected state here, e.g., change background color, border, etc. */
+    background-color: black;
+    border: 0.15rem solid black;
+    color: white;
+}
+
+.text-container {
+    flex-direction: column;
+    word-wrap: break-word;
+    width: 70%;
+    height: auto;
+    text-align: start;
+    margin-left: 6rem;
+    border-top: 0.1rem solid black;
+    padding: 1rem;
+    /* Hide the overflowing text */
+
+    /* Prevent the text from wrapping by default */
+
+}
+
+.product-name {
+    padding: 5rem;
+    font-size: 5rem;
+
+}
+
+.product-price {
+    font-size: 6rem;
+    margin-top: 3rem;
+}
+
+.product-image {
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 0.4375rem 0.4375rem 1rem #c4c3c3, -0.4375rem -0.4375rem 1rem #ffffff;
+
+}
+
+
+.product-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.product-image-container {
+    padding: 5rem;
+    flex: 1;
+    max-width: 70rem;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.product-image-container img {
+    width: 80vh;
+    height: 70vh;
+    border-radius: 50%;
+    box-shadow: 0.5rem 0.5rem 1.0625rem #c4c3c3, -0.5rem -0.5rem 2rem #ffffff;
+
+}
+
+.product-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5rem;
+
+
+}
+
+
+.product-section h3 {
+    font-size: 4rem;
+
+}
+
+.button-showcase {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    /* Adjust the value to control the roundness of the buttons */
+    background-color: #ffffff;
+    /* Set the background color */
+    color: black;
+    /* Set the text color */
+    font-size: 4rem;
+    transition: background-color 0.5s;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.favicon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    font-family: "Font Awesome 5 Free";
+    padding: 1rem;
+}
+
+.button-showcase::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    border: 0.2rem solid transparent;
+    z-index: -1;
+    animation: borderAnimation 2s linear infinite;
+}
+
+.button-showcase:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+}
+
+.button-showcase:hover::before {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.delen {
+    font-size: 1.5rem;
+}
+
+
+
+
+/* Begin Footer */
+.footer {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+.footer-content li {
+    margin-right: 1rem;
+}
+
+.footer-content img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 37.5rem) {
+    .header {
+        flex-direction: column;
+        padding: 1.5rem;
+        height: 15rem;
+        width: 100%;
+    }
+
+
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .products {
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 2rem;
+        padding: 1rem;
+
+    }
+
+    .products a {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .product-section {
+        flex-direction: column;
+    }
+
+
+
+}
