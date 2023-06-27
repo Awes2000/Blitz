@@ -4,360 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blitz Collections</title>
-    <link rel="stylesheet" href="/css/products.css" />
-    <script src="/js/products.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
     />
-    <script
-      src="https://kit.fontawesome.com/40dd9b944f.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    />
+    <link rel="stylesheet" href="css/products.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <title>Collections</title>
   </head>
   <body>
     <header class="header">
       <nav class="products">
         <img class="logo" src="img/logoblitzgold.webp" alt="" />
-        <a href="index.html" id="page1" class="button">Home</a>
+        <a href="index.html" id="page1" class="button"
+          >Home</a
+        >
         <a href="productlist2.html" id="page2" class="button"
           >Pricing & Packages</a
         >
       </nav>
     </header>
-    <article class="modal a-popup" id="js--shoppingModal">
-      &#10003;Added To Cart
-    </article>
-    <button id="js--checkoutButton" class="shoppingCart">
-      <span class="material-symbols-outlined" id="icon">
-        shopping_cart_checkout
-      </span>
-      <section id="js--checkoutWindow" class="checkout">
-        <ul class="checkout__list">
-          <li class="checkout__listItem">
-            <img
-              src="/img/buzz.jpg"
-              alt="Pandora sierraad van Buzz LightYear "
-              class="checkout__image"
-            />
-            <p class="checkout__title">Buzz Lightyear - Pixar</p>
-            <p id="js--price-buzz" class="checkout__amount">€0</p>
-          </li>
-          <li class="checkout__listItem">
-            <img
-              src="/img/ironman.jpg"
-              alt="Pandora sierraad van Ironman "
-              class="checkout__image"
-            />
-            <p class="checkout__title">Ironman</p>
-            <p id="js--price-ironman" class="checkout__amount">€0</p>
-          </li>
-          <li class="checkout__listItem">
-            <img
-              src="img/c3po.jpg"
-              alt="Pandora sierraad van c3po"
-              class="checkout__image"
-            />
-            <p class="checkout__title">C3P0</p>
-            <p id="js--price-c3po" class="checkout__amount">€0</p>
-          </li>
+    </section>
+    <section class="productenOverzicht">
+      <section class="productenOverzicht__filters">
+        <section class="inputMerken">
+          <h2>Merken</h2>
+          <div>
+            <input id="checkbox-sport" type="checkbox" class="filter" />
+            <label for="checkbox-sport" class="label">Sport</label>
+          </div>
+          <div>
+            <input id="checkbox-yamaha" type="checkbox" class="filter" />
+            <label for="checkbox-yamaha" class="label">Cruise</label>
+          </div>
+          <div>
+            <input id="checkbox-kawasaki" type="checkbox" class="filter" />
+            <label for="checkbox-kawasaki" class="label">Turbo</label>
+          </div>
+          <div>
+            <input id="checkbox-honda" type="checkbox" class="filter" />
+            <label for="checkbox-honda" class="label">Blaze</label>
+          </div>
+        </section>
+       
+      </section>
+      <section class="productenOverzicht__producten">
+        <ul class="games" id="productList1">
+          <!-- Placeholder elements to fill the grid -->
+          <li class="game"></li>
+          <li class="game"></li>
+          <li class="game"></li>
+          <li class="game"></li>
         </ul>
       </section>
-
-      <div class="shoppingCart__message">0</div>
-    </button>
-    <main>
-      <ul class="games">
-        <!-- Product 1 - Sport -->
-        <li data-title="Sport Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/sport.jpg"
-              alt="Sport Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Sport Exhaust Pipe</h3>
-            <p class="games__description">
-              Experience the thrill of speed with our Sport Exhaust Pipe.
-              Engineered for maximum performance, it delivers a deep and
-              aggressive exhaust note that will turn heads wherever you go.
-              Designed with precision and crafted from high-quality materials,
-              our Sport Exhaust Pipe ensures optimal airflow and enhanced
-              horsepower. Upgrade your vehicle's aesthetics and performance with
-              this must-have accessory.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 2 - Cruise -->
-        <li data-title="Cruise Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="/img/cruise.jpg"
-              alt="Cruise Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€39</h2>
-            <h3 class="games__h3">Cruise Exhaust Pipe</h3>
-            <p class="games__description">
-              Elevate your driving experience with our Cruise Exhaust Pipe.
-              Unleash the perfect harmony of power and refinement, as this
-              exhaust system provides a smooth and deep exhaust tone that
-              complements your vehicle's elegance. Crafted with meticulous
-              attention to detail and engineered for improved fuel efficiency,
-              our Cruise Exhaust Pipe ensures a comfortable and serene ride
-              while enhancing your car's overall performance.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 3 - Turbo -->
-        <li data-title="Turbo Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/turbo.jpg"
-              alt="Turbo Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Turbo Exhaust Pipe</h3>
-            <p class="games__description">
-              Unleash the power of your vehicle with our Turbo Exhaust Pipe.
-              Designed for performance enthusiasts, this exhaust system offers
-              increased horsepower and torque, providing an exhilarating driving
-              experience. Engineered with cutting-edge technology and precision
-              craftsmanship, our Turbo Exhaust Pipe maximizes exhaust gas flow
-              for enhanced turbocharger response. Stand out from the crowd and
-              enjoy the ultimate combination of style and performance.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 4 - Blaze -->
-        <li data-title="Blaze Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/blaze.jpg"
-              alt="Blaze Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Turbo Exhaust Pipe</h3>
-            <p class="games__description">
-              Unleash the power of your vehicle with our Turbo Exhaust Pipe.
-              Designed for performance enthusiasts, this exhaust system offers
-              increased horsepower and torque, providing an exhilarating driving
-              experience. Engineered with cutting-edge technology and precision
-              craftsmanship, our Turbo Exhaust Pipe maximizes exhaust gas flow
-              for enhanced turbocharger response. Stand out from the crowd and
-              enjoy the ultimate combination of style and performance.
-            </p>
-          </section>
-        </li>
-        <li data-title="Sport Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/sport.jpg"
-              alt="Sport Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Sport Exhaust Pipe</h3>
-            <p class="games__description">
-              Experience the thrill of speed with our Sport Exhaust Pipe.
-              Engineered for maximum performance, it delivers a deep and
-              aggressive exhaust note that will turn heads wherever you go.
-              Designed with precision and crafted from high-quality materials,
-              our Sport Exhaust Pipe ensures optimal airflow and enhanced
-              horsepower. Upgrade your vehicle's aesthetics and performance with
-              this must-have accessory.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 2 - Cruise -->
-        <li data-title="Cruise Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="/img/cruise.jpg"
-              alt="Cruise Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€39</h2>
-            <h3 class="games__h3">Cruise Exhaust Pipe</h3>
-            <p class="games__description">
-              Elevate your driving experience with our Cruise Exhaust Pipe.
-              Unleash the perfect harmony of power and refinement, as this
-              exhaust system provides a smooth and deep exhaust tone that
-              complements your vehicle's elegance. Crafted with meticulous
-              attention to detail and engineered for improved fuel efficiency,
-              our Cruise Exhaust Pipe ensures a comfortable and serene ride
-              while enhancing your car's overall performance.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 3 - Turbo -->
-        <li data-title="Turbo Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/turbo.jpg"
-              alt="Turbo Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Turbo Exhaust Pipe</h3>
-            <p class="games__description">
-              Unleash the power of your vehicle with our Turbo Exhaust Pipe.
-              Designed for performance enthusiasts, this exhaust system offers
-              increased horsepower and torque, providing an exhilarating driving
-              experience. Engineered with cutting-edge technology and precision
-              craftsmanship, our Turbo Exhaust Pipe maximizes exhaust gas flow
-              for enhanced turbocharger response. Stand out from the crowd and
-              enjoy the ultimate combination of style and performance.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 4 - Blaze -->
-        <li data-title="Blaze Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/blaze.jpg"
-              alt="Blaze Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Turbo Exhaust Pipe</h3>
-            <p class="games__description">
-              Unleash the power of your vehicle with our Turbo Exhaust Pipe.
-              Designed for performance enthusiasts, this exhaust system offers
-              increased horsepower and torque, providing an exhilarating driving
-              experience. Engineered with cutting-edge technology and precision
-              craftsmanship, our Turbo Exhaust Pipe maximizes exhaust gas flow
-              for enhanced turbocharger response. Stand out from the crowd and
-              enjoy the ultimate combination of style and performance.
-            </p>
-          </section>
-        </li>
-        <li data-title="Sport Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/sport.jpg"
-              alt="Sport Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Sport Exhaust Pipe</h3>
-            <p class="games__description">
-              Experience the thrill of speed with our Sport Exhaust Pipe.
-              Engineered for maximum performance, it delivers a deep and
-              aggressive exhaust note that will turn heads wherever you go.
-              Designed with precision and crafted from high-quality materials,
-              our Sport Exhaust Pipe ensures optimal airflow and enhanced
-              horsepower. Upgrade your vehicle's aesthetics and performance with
-              this must-have accessory.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 2 - Cruise -->
-        <li data-title="Cruise Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="/img/cruise.jpg"
-              alt="Cruise Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€39</h2>
-            <h3 class="games__h3">Cruise Exhaust Pipe</h3>
-            <p class="games__description">
-              Elevate your driving experience with our Cruise Exhaust Pipe.
-              Unleash the perfect harmony of power and refinement, as this
-              exhaust system provides a smooth and deep exhaust tone that
-              complements your vehicle's elegance. Crafted with meticulous
-              attention to detail and engineered for improved fuel efficiency,
-              our Cruise Exhaust Pipe ensures a comfortable and serene ride
-              while enhancing your car's overall performance.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 3 - Turbo -->
-        <li data-title="Turbo Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/turbo.jpg"
-              alt="Turbo Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Turbo Exhaust Pipe</h3>
-            <p class="games__description">
-              Unleash the power of your vehicle with our Turbo Exhaust Pipe.
-              Designed for performance enthusiasts, this exhaust system offers
-              increased horsepower and torque, providing an exhilarating driving
-              experience. Engineered with cutting-edge technology and precision
-              craftsmanship, our Turbo Exhaust Pipe maximizes exhaust gas flow
-              for enhanced turbocharger response. Stand out from the crowd and
-              enjoy the ultimate combination of style and performance.
-            </p>
-          </section>
-        </li>
-
-        <!-- Product 4 - Blaze -->
-        <li data-title="Blaze Exhaust Pipe" class="games__game">
-          <figure class="games__figure">
-            <img
-              src="img/blaze.jpg"
-              alt="Blaze Exhaust Pipe"
-              class="games__img"
-            />
-          </figure>
-          <section class="games__body">
-            <h2 class="games__h2">€49</h2>
-            <h3 class="games__h3">Turbo Exhaust Pipe</h3>
-            <p class="games__description">
-              Unleash the power of your vehicle with our Turbo Exhaust Pipe.
-              Designed for performance enthusiasts, this exhaust system offers
-              increased horsepower and torque, providing an exhilarating driving
-              experience. Engineered with cutting-edge technology and precision
-              craftsmanship, our Turbo Exhaust Pipe maximizes exhaust gas flow
-              for enhanced turbocharger response. Stand out from the crowd and
-              enjoy the ultimate combination of style and performance.
-            </p>
-          </section>
-        </li>
-      </ul>
-    </main>
+    </section>
+    <footer></footer>
   </body>
 </html>
