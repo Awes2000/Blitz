@@ -4,28 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blitz Pricing</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
     />
-    <script
-      src="https://kit.fontawesome.com/40dd9b944f.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="css/products.css" />
+    
+    <script src="js/products2.js" defer></script>
+    <title>Collections</title>
   </head>
   <body>
     <header class="header">
       <nav class="products">
         <img class="logo" src="img/logoblitzgold.webp" alt="" />
-        <a href="index.html" id="page1" class="button">Home</a>
-        <a href="productlist1.html" id="page2" class="button"
-          >Explore Collections</a
+        <a href="index.html" id="page1" class="button"
+          >Home</a
+        >
+        <a href="productlist2.html" id="page2" class="button"
+          >Pricing & Packages</a
         >
       </nav>
     </header>
+    </section>
+    <section class="productenOverzicht">
+      <section class="productenOverzicht__filters">
+        <section class="inputPrice">
+          <h2>Price</h2>
+          <select id="priceFilter" class="filter2">
+          <option value="0" selected>All</option>
+          <option value="1000" id="priceFilter-1000">€1000 or less</option>
+          <option value="500" id="priceFilter-500">€500 or less</option>
+          <option value="650" id="priceFilter-650">€650 or less</option>
+          <option value="850" id="priceFilter-850">€850 or less</option>
+          </select>
+        </section>
+      </section>
+      <section class="productenOverzicht__producten">
+        <ul class="games" id="productList1">
+          <!-- Placeholder elements to fill the grid -->
+          <li class="game"></li>
+          <li class="game"></li>
+          <li class="game"></li>
+          <li class="game"></li>
+        </ul>
+      </section>
+    </section>
+    <footer></footer>
   </body>
 </html>
