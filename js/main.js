@@ -40,6 +40,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const tuningCircles = document.getElementsByClassName("tuning-circle");
   const tuningSelectionText = document.getElementById("tuning-selection-text");
   const tuningImage = document.getElementById("tuning-image");
+  const productPrice = document.querySelector(".product-price");
 
   for (let i = 0; i < tuningCircles.length; i++) {
     tuningCircles[i].addEventListener("click", function () {
@@ -52,10 +53,13 @@ window.addEventListener("DOMContentLoaded", function () {
   function updateTuningSelection(index) {
     if (index === 1) {
       tuningSelectionText.innerHTML = "Fine tuning";
+      productPrice.innerHTML = "€449.99";
     } else if (index === 2) {
       tuningSelectionText.innerHTML = "Pro tuning";
+      productPrice.innerHTML = "€499.99";
     } else if (index === 3) {
       tuningSelectionText.innerHTML = "Ultimate tuning";
+      productPrice.innerHTML = "€549.99";
     }
   }
 
@@ -79,3 +83,36 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// Display popup message and update cart count
+function addToCart() {
+  var cartCountElement = document.querySelector(".cart-count");
+  var popupMessageElement = document.getElementById("popup-message");
+
+  // Update cart count
+  var cartCount = parseInt(cartCountElement.innerHTML);
+  cartCount++;
+  cartCountElement.innerHTML = cartCount;
+
+  // Display popup message
+  popupMessageElement.innerHTML = "Added to cart!";
+
+  // Show the popup
+  var popup = document.getElementById("popup");
+  popup.style.display = "block";
+
+  // Hide the popup after 1 second
+  setTimeout(function () {
+    popup.style.display = "none";
+  }, 1000);
+}
+
+// Initialize cart functionality
+function initCart() {
+  // Add event listener to "Add to Cart" button
+  var addToCartButton = document.getElementById("button-showcase");
+  addToCartButton.addEventListener("click", addToCart);
+}
+
+// Initialization
+initCart();
