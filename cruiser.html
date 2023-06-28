@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blitz Webshop</title>
     <link rel="stylesheet" href="/css/sport.css" />
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
 
     <link
       rel="stylesheet"
@@ -24,41 +24,64 @@
         <a href="index.html" class="button">Home</a>
         <a href="productlist1.html" class="button">Explore Collections</a>
         <a href="productlist2.html" class="button">Pricing & Packages</a>
+        <a href="cart.html" class="cart-link">
+          <span class="cart-icon">
+            <i class="fa fa-shopping-cart cart"></i>
+            <span class="cart-count">0</span>
+          </span>
+        </a>
       </nav>
     </header>
+    <span id="popup" class="popup">
+      <span class="popup-content">
+        <span class="close">&times;</span>
+        <p id="popup-message"></p>
+      </span>
+    </span>
+
     <article class="product-content sport">
       <figure class="product-image-container">
         <img id="tuning-image" src="img/exhaust3.webp" alt="Product Image" />
       </figure>
       <section class="product-info-container">
-        <h3 class="product-name">Cruise 409VR</h3>
+        <h3 class="product-name">Sport TT505</h3>
         <span class="tuning-options">
-          <span class="tuning-circle" id="tuning-circle-1">+1</span>
-          <span class="tuning-circle" id="tuning-circle-2">+2</span>
-          <span class="tuning-circle" id="tuning-circle-3">+3</span>
+          <span class="tuning-circle" id="tuning-circle-1" data-option="fine"
+            >+1</span
+          >
+          <span class="tuning-circle" id="tuning-circle-2" data-option="pro"
+            >+2</span
+          >
+          <span
+            class="tuning-circle"
+            id="tuning-circle-3"
+            data-option="ultimate"
+            >+3</span
+          >
         </span>
         <span class="tuning-selection">
           <p id="tuning-selection-text">No tuning selected.</p>
         </span>
-        <button type="button" class="button-showcase">Add to Cart</button>
-        <p class="product-price">$399.99</p>
+        <button type="button" class="button-showcase" id="button-showcase">
+          Add to Cart
+        </button>
+        <p class="product-price">€399.99</p>
       </section>
       <section class="text-container">
         <p class="product-description sport">
-          Introducing our Cruiser exhaust pipes, tailored for the ultimate
-          cruising experience. Immerse yourself in a journey of style and
-          relaxation as you enhance your vehicle's aesthetics with a touch of
-          elegance and tranquility. These exhaust pipes are expertly crafted
-          using top-quality materials, guaranteeing durability and elevating the
-          overall allure of your ride. With their sleek design and meticulous
-          engineering, our Cruiser pipes not only enhance visual appeal but also
-          optimize performance for smooth and effortless cruising. Upgrade your
-          vehicle with our premium Cruiser exhaust pipes and embark on a serene
-          and blissful driving adventure. Discover a harmonious blend of style,
-          comfort, and refined cruising with our exceptional Cruiser exhaust
-          pipes.
-          <a href="sport.html"> </a>
+          Introducing our high-performance sport exhaust pipes designed
+          exclusively for electric cars. Experience the perfect fusion of style
+          and power as you elevate your vehicle's aesthetics with a touch of
+          sportiness and sophistication. Meticulously crafted using premium
+          materials, our exhaust pipes ensure unmatched durability and enhance
+          the overall look of your electric vehicle. With sleek design and
+          precision engineering, these pipes not only amplify visual appeal but
+          also optimize aerodynamics for improved performance. Upgrade your
+          electric car today and indulge in the seamless combination of style,
+          power, and eco-friendly driving. Unleash the true potential of your
+          vehicle with our premium sport exhaust pipes.
         </p>
+        <a href="sport.html"></a>
       </section>
     </article>
     <footer class="footer">
