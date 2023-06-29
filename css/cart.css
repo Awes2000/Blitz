@@ -120,6 +120,51 @@ p {
 
 
 @media screen and (max-width: 62.5rem) {
+
+    .header {
+        flex-direction: column;
+        padding: 1.5rem;
+        height: auto;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .products {
+        justify-content: center;
+        margin: 1rem 0;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .products a {
+        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 4rem;
+        text-decoration: none;
+        color: black;
+        background-color: #f9f9f9;
+        border-radius: 0.5rem;
+    }
+
+    .products a:hover {
+        background-color: #e0e0e0;
+    }
+
+    .button {
+        flex: 1;
+        height: 100%;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
     body {
         padding: 2rem;
     }
