@@ -29,7 +29,7 @@ soulslikeFilter.onchange = function () {
   }
 };
 
-let rpgFilter = document.getElementById("checkbox-yamaha");
+let rpgFilter = document.getElementById("checkbox-cruise");
 rpgFilter.onchange = function () {
   if (rpgFilter.checked === true) {
     for (let i = 0; i < allGames.length; i++) {
@@ -46,7 +46,7 @@ rpgFilter.onchange = function () {
   }
 };
 
-let actionFilter = document.getElementById("checkbox-kawasaki");
+let actionFilter = document.getElementById("checkbox-turbo");
 actionFilter.onchange = function () {
   if (actionFilter.checked === true) {
     for (let i = 0; i < allGames.length; i++) {
@@ -63,7 +63,7 @@ actionFilter.onchange = function () {
   }
 };
 
-let hondaFilter = document.getElementById("checkbox-honda");
+let hondaFilter = document.getElementById("checkbox-blaze");
 hondaFilter.onchange = function () {
   if (hondaFilter.checked === true) {
     for (let i = 0; i < allGames.length; i++) {
