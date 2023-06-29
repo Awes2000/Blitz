@@ -220,7 +220,22 @@ p {
     height: auto;
     text-align: start;
     margin-left: 6rem;
-    border-top: 0.1rem solid black;
+    border-top: 0.4rem solid rgb(179, 21, 21);
+    padding: 1rem;
+    /* Hide the overflowing text */
+
+    /* Prevent the text from wrapping by default */
+
+}
+
+.text-container-2 {
+    flex-direction: column;
+    word-wrap: break-word;
+    width: 70%;
+    height: auto;
+    text-align: start;
+    margin-left: 6rem;
+    border-top: 0.4rem solid rgb(13, 78, 184);
     padding: 1rem;
     /* Hide the overflowing text */
 
