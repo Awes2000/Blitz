@@ -440,6 +440,12 @@ a {
     padding-bottom: 2rem;
 }
 
+.review img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
 
 .steps-section {
     display: grid;
